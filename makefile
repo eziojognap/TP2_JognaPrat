@@ -12,7 +12,7 @@ OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC_FILES))
 
 .DEFAULT_GOAL := all
 
-$(OBJ_DIR):
+$(OUT_DIR):
 	mkdir $(OUT_DIR)
 
 $(OBJ_DIR): $(OUT_DIR)
