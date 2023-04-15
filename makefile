@@ -28,6 +28,6 @@ all: $(OBJ_FILES) $(BIN_DIR)
 	gcc -o $(BIN_DIR)/app.elf $(OBJ_FILES)
 	echo $(SRC_FILES)
 	echo $(OBJ_FILES)
-	
+
 clean: $(OUT_DIR)
 	rm -r $(OUT_DIR)
