@@ -7,6 +7,8 @@
 
 /************************************* INCLUDES ***************************************************/
 #include "alumno.h"
+#include <stdio.h>
+
 /************************************* EXTERN VARIABLES *******************************************/
 
 /************************************* PRIVATE MACROS AND DEFINES *********************************/
@@ -24,5 +26,17 @@
 /************************************* GLOBAL FUNCTIONS *******************************************/
 int main(void)
 {
+    static const struct alumno_s yo = {
+            .apellido = "Jogna Prat",
+            .nombre = "Ezio",
+            .documento = 41649861,
+    };
+    char cadena[128];
+    
+    if (Serializar(&yo, cadena, sizeof(cadena)) >= 0){
+        printf("%s\n", cadena);
+    } else {
+        printf("Error al serializar\n");
+    }
     return 0;
 }
